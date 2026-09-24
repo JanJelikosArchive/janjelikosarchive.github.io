@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The lair</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bod">
+
+    <header>
+            <h1>Welcome, to my lair</h1>
+    </header>
+    
+    <div id="screen">
+        <div id="about">
+            <img src="badge final.png" width="20%" height="20%">
+            <div>
+                <h2>About me</h2>
+                <p>My name is Erick <br/><br/>
+                    I also go by Jericho or Jeliko<br/><br/>
+                    I am a small polish artist and writer. Also a code developer <br/><br/>
+                    I do furry commissions, that also include remaking memes for the fun of it. <br/><br/>
+                    I am a hobby commissioner that's why i don't take much money, <br/> but that means i try to fit art into my day to day, and you shouldn't expect a professional level of quality  <br/><br/>
+                    You can find me on tumblr and telegram, below are my socials</p>
+            </div>
+            
+        </div>
+
+        <div id="socials">
+            <h2> My social media </h2>
+            <a href="https://www.tumblr.com/janjelikoslair"><img src="OIP-1340158279.jpg" width="40"></a>
+            <a href="https://www.tumblr.com/janjelikoslair"> My main tumblr</a>
+            <a href="https://www.tumblr.com/jaskinia-jerycho"><img src="OIP-1340158279.jpg" width="40"></a>
+            <a href="https://www.tumblr.com/jaskinia-jerycho"> My commission blog on tumblr</a>
+            <a href="https://t.me/janJelikoslair"><img src="telegram-logo-icon-transparent-8990-1278299751.png" width="40"></a>
+            <a href="https://t.me/janJelikoslair"> telegram channel</a>
+        </div>
+
+        <div id="commissions">
+
+            <h2>one character:</h2>
+            <div id="table">
+                <div class="table-col">
+                    <h3>lineart:</h3>
+                    <p> bust - 5 pln
+                        <br/>half body - 10 pln 
+                        <br/> full body - 15 pln
+                    </p>
+                </div>
+
+                <div class="table-col">
+                    <h3>colored and shadowed:</h3>
+                    <p>bust - 15 pln
+                        <br/>half body - 20 pln
+                        <br/> full body - 25 pln
+                    </p>
+                </div>
+
+            </div>
+
+            <h2>more than one character (max 5 characters)(a big group may take more time):</h2>
+            <div id="table">
+                <div class="table-col">
+                    <h3>lineart:</h3>
+                    <p> bust - 25 pln
+                        <br/>half body - 30 pln 
+                        <br/> full body - 35 pln
+                    </p>
+                </div>
+
+                <div class="table-col">
+                    <h3>colored and shadowed:</h3>
+                    <p>bust - 35 pln
+                        <br/>half body - 40 pln
+                        <br/> full body - 45 pln
+                    </p>
+                </div>
+
+            </div>
+
+            <h3>35 pln (the price is strict) - photo/meme remake (fully colored and shadowed art made from a refrance photo for scenery and positions drawn into your fursona or a meme made into a character of choice)
+
+                <br/><br/>if you specify the background or ask to include a background there will be no addicional charges to your commission please specify if you want a background or not while ordering
+
+                <br/><br/>any details on the payment procedures can be discussed with me but i will be mainly taking it as a payment to my phone by blik </h3>
+
+
+        </div>
+
+        <div id="art">
+
+            <div id="btns">
+                <button onclick="left()">←</button>
+                <button onclick="right()">→</button>
+            </div>
+            <br>
+            
+            <img id="artwork">
+
+            <script>
+
+                var artwork = document.getElementById("artwork")
+                var srcid = 1
+                var max = 11
+                var min = 1
+                artwork.src = `${srcid}.png`
+
+                function right(){
+                    if (srcid == max){
+                        srcid = 1
+                    }else{
+                        srcid ++
+                    }
+                    
+                    artwork.src = `${srcid}.png`
+                    console.log(srcid)
+                }
+
+                function left(){
+                    if (srcid == min){
+                        srcid = 11
+                    }else{
+                        srcid --
+                    }
+                    artwork.src = `${srcid}.png`
+                }
+
+            </script>
+
+            <!--<h2> Recent works </h2>
+            <div id="gallery">
+                <img src="sheep.png">
+                <img src="Forgettable.jpg">
+            </div>
+            <div id="gallery">
+                <img src="wallpaper.png" style="margin-top: 2%;">
+            </div>-->
+        </div>
+
+        <div id="writing">
+            <h2> story archive </h2>
+            <a href="stories.html"> Site for the archive</a>
+        </div> 
+    </div>
+
+    
+    <script>
+
+        const isSmallScreen = () => {
+                return window.innerWidth <= 768;
+            };
+
+            if (isSmallScreen()) {
+                console.log("Small screen detected");
+                 document.getElementById("bod").width = "768"; 
+            }
+
+    </script>
+</body>
+</html>
